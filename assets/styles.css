@@ -428,3 +428,26 @@ h1,h2,h3{margin-bottom:.75rem}p{margin-bottom:.75rem}.lead{margin-bottom:.9rem}
   .map-link img { min-width: 650px; }
   .stats { grid-template-columns: 1fr 1fr !important; }
 }
+
+/* Phone-only hero order: show candidate photo/vote card first, then headline + mission/vision */
+@media (max-width: 760px) {
+  .hero-grid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .hero-card {
+    order: 1 !important;
+    width: 100%;
+    margin-top: 0 !important;
+  }
+
+  .hero-copy {
+    order: 2 !important;
+    width: 100%;
+  }
+
+  .hero-copy .eyebrow {
+    margin-top: .25rem;
+  }
+}
