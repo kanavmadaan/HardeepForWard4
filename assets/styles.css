@@ -429,25 +429,47 @@ h1,h2,h3{margin-bottom:.75rem}p{margin-bottom:.75rem}.lead{margin-bottom:.9rem}
   .stats { grid-template-columns: 1fr 1fr !important; }
 }
 
-/* Phone-only hero order: show candidate photo/vote card first, then headline + mission/vision */
+/* Phone-only homepage hero order: headline first, photo/vote card second, mission/vision after */
 @media (max-width: 760px) {
   .hero-grid {
     display: flex !important;
     flex-direction: column !important;
   }
 
-  .hero-card {
-    order: 1 !important;
-    width: 100%;
-    margin-top: 0 !important;
-  }
-
+  /* Let the headline, mission card, buttons, and stats be ordered separately on mobile only. */
   .hero-copy {
-    order: 2 !important;
-    width: 100%;
+    display: contents !important;
   }
 
   .hero-copy .eyebrow {
-    margin-top: .25rem;
+    display: none !important;
+  }
+
+  .hero-copy h1 {
+    order: 1 !important;
+    width: 100%;
+    margin-bottom: .2rem !important;
+  }
+
+  .hero-card {
+    order: 2 !important;
+    width: 100%;
+    margin-top: .2rem !important;
+  }
+
+  .mission-vision-card {
+    order: 3 !important;
+    width: 100%;
+    margin-top: .75rem !important;
+  }
+
+  .hero-actions {
+    order: 4 !important;
+    width: 100%;
+  }
+
+  .stats {
+    order: 5 !important;
+    width: 100%;
   }
 }
