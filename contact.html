@@ -36,36 +36,87 @@
     <div class="page-hero-card" data-photo="10.jpg"><img src="assets/images/10.jpg" onerror="this.parentElement.classList.add('missing-photo'); this.remove();" alt="Campaign volunteers or community contact photo"></div>
   </div>
 </section>
-<section class="section">
-  <div class="container split">
-    <div>
-      <span class="eyebrow">People-powered</span>
-      <h2>Every conversation matters.</h2>
-      <p class="lead">Campaigns are built by neighbours. Use this page to volunteer, request a lawn sign, host a coffee chat, or share a local issue.</p>
-      <div class="grid-2 top-gap">
-        <div class="feature-card"><div class="icon">🏡</div><h3>Lawn sign</h3><p>Request a sign and help create visibility across Ward 4.</p></div>
-        <div class="feature-card"><div class="icon">🚪</div><h3>Canvass</h3><p>Knock doors, make calls, or help with literature drops.</p></div>
-        <div class="feature-card"><div class="icon">☕</div><h3>Host a coffee</h3><p>Bring neighbours together for a small, respectful conversation.</p></div>
-        <div class="feature-card"><div class="icon">💬</div><h3>Share an issue</h3><p>Tell the campaign what needs attention in your neighbourhood.</p></div>
-      </div>
+
+<section class="section get-involved-strip" id="power">
+  <div class="container">
+    <div class="narrow section-head">
+      <span class="eyebrow">Get Involved</span>
+      <h2>Four ways to power the campaign.</h2>
+      <p class="lead">Every volunteer, every lawn sign, every conversation matters. Pick the one that fits your schedule — or do all four.</p>
     </div>
-    <div class="card">
-      <h3>Contact the campaign</h3>
-      <form class="form" data-mailto-form>
+    <div class="power-grid power-grid-keene">
+      <a class="power-card" href="contact.html#take-action" data-action-link="volunteer"><span class="power-icon">🙋</span><h3>Volunteer</h3><p>Door-knocking, phone calls, sign installs, event help — there’s a role for every schedule.</p><strong>Sign me up →</strong></a>
+      <a class="power-card" href="contact.html#take-action" data-action-link="sign"><span class="power-icon">🪧</span><h3>Request a Lawn Sign</h3><p>Show your neighbours you back Hardeep. We’ll deliver and install for free in Ward 4.</p><strong>Send me a sign →</strong></a>
+      <a class="power-card" href="index.html#donate"><span class="power-icon">💚</span><h3>Donate</h3><p>E-transfer in seconds. Every contribution funds signs, flyers, and getting our message out.</p><strong>Send an e-transfer →</strong></a>
+      <a class="power-card" href="contact.html#take-action" data-action-link="contact"><span class="power-icon">✉️</span><h3>Connect with Hardeep</h3><p>Got a question, an idea, or an issue in your neighbourhood? Reach Hardeep directly.</p><strong>Get in touch →</strong></a>
+    </div>
+  </div>
+</section>
+
+<section class="section action-section" id="take-action">
+  <div class="container">
+    <div class="narrow section-head">
+      <span class="eyebrow">Take Action</span>
+      <h2>Tell us how you want to help.</h2>
+      <p class="lead">Choose your action below. Every form goes straight to the campaign team.</p>
+    </div>
+    <div class="action-center">
+      <div class="action-tabs" role="tablist" aria-label="Campaign action forms">
+        <button class="action-tab active" type="button" data-action-tab="volunteer">🙋 Volunteer</button>
+        <button class="action-tab" type="button" data-action-tab="sign">🪧 Lawn Sign</button>
+        <button class="action-tab" type="button" data-action-tab="contact">✉️ Contact</button>
+      </div>
+
+      <form class="form action-form active" data-action-panel="volunteer" data-mailto-form>
+        <input type="hidden" name="interest" value="Volunteer for Hardeep">
+        <h3>Volunteer for Hardeep</h3>
+        <p>Tell us how you’d like to help — we’ll match you to where you’re needed.</p>
         <div class="form-row">
-          <div><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div>
-          <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+          <div><label for="vol-name">Full Name *</label><input id="vol-name" name="name" autocomplete="name" required></div>
+          <div><label for="vol-email">Email *</label><input id="vol-email" name="email" type="email" autocomplete="email" required></div>
         </div>
         <div class="form-row">
-          <div><label for="phone">Phone</label><input id="phone" name="phone" autocomplete="tel"></div>
-          <div><label for="interest">I want to</label><select id="interest" name="interest"><option>Volunteer</option><option>Request a lawn sign</option><option>Host a coffee chat</option><option>Share a local issue</option><option>Ask a voting question</option></select></div>
+          <div><label for="vol-phone">Phone</label><input id="vol-phone" name="phone" autocomplete="tel"></div>
+          <div><label for="vol-address">Street Address</label><input id="vol-address" name="street_address" autocomplete="street-address"></div>
         </div>
-        <div><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell us how you want to help or what issue matters to you."></textarea></div>
-        <button class="btn btn-primary" type="submit">Send message →</button>
+        <fieldset class="check-group"><legend>Availability (check all that apply)</legend><label><input type="checkbox" name="availability" value="Weekdays"> Weekdays</label><label><input type="checkbox" name="availability" value="Evenings"> Evenings</label><label><input type="checkbox" name="availability" value="Weekends"> Weekends</label><label><input type="checkbox" name="availability" value="Flexible"> Flexible</label></fieldset>
+        <fieldset class="check-group"><legend>How would you like to help?</legend><label><input type="checkbox" name="help_with" value="Door knocking"> Door knocking</label><label><input type="checkbox" name="help_with" value="Phone calls"> Phone calls</label><label><input type="checkbox" name="help_with" value="Event help"> Event help</label><label><input type="checkbox" name="help_with" value="Social media"> Social media</label><label><input type="checkbox" name="help_with" value="Sign installs"> Sign installs</label><label><input type="checkbox" name="help_with" value="Wherever needed"> Wherever needed</label></fieldset>
+        <div><label for="vol-message">Anything else we should know?</label><textarea id="vol-message" name="message"></textarea></div>
+        <button class="btn btn-primary" type="submit">Send My Sign-up →</button>
+      </form>
+
+      <form class="form action-form" data-action-panel="sign" data-mailto-form>
+        <input type="hidden" name="interest" value="Lawn sign request">
+        <h3>Request a Lawn Sign</h3>
+        <p>Share your address and the campaign team will follow up for delivery and placement.</p>
+        <div class="form-row">
+          <div><label for="sign-name">Full Name *</label><input id="sign-name" name="name" autocomplete="name" required></div>
+          <div><label for="sign-email">Email *</label><input id="sign-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="form-row">
+          <div><label for="sign-phone">Phone</label><input id="sign-phone" name="phone" autocomplete="tel"></div>
+          <div><label for="sign-address">Street Address *</label><input id="sign-address" name="street_address" autocomplete="street-address" required></div>
+        </div>
+        <div><label for="sign-message">Placement notes</label><textarea id="sign-message" name="message" placeholder="Example: front lawn, corner lot, call before delivery, etc."></textarea></div>
+        <button class="btn btn-primary" type="submit">Send Sign Request →</button>
+      </form>
+
+      <form class="form action-form" data-action-panel="contact" data-mailto-form>
+        <input type="hidden" name="interest" value="Contact Hardeep">
+        <h3>Connect with Hardeep</h3>
+        <p>Got a question, idea, or neighbourhood issue? Send it directly to the campaign team.</p>
+        <div class="form-row">
+          <div><label for="contact-name">Full Name *</label><input id="contact-name" name="name" autocomplete="name" required></div>
+          <div><label for="contact-email">Email *</label><input id="contact-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div><label for="contact-phone">Phone</label><input id="contact-phone" name="phone" autocomplete="tel"></div>
+        <div><label for="contact-message">Message *</label><textarea id="contact-message" name="message" required></textarea></div>
+        <button class="btn btn-primary" type="submit">Get in touch →</button>
       </form>
     </div>
   </div>
 </section>
+
 <section class="section-tight">
   <div class="container">
     <div class="banner">
