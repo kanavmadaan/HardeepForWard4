@@ -29,3 +29,10 @@ Source: Town of Halton Hills Ward 4 Map PDF provided for this website build.
 ## Important
 
 Keep the file extension as `.jpg`, not `.jpeg`, `.JPG`, or `.png`, unless you also update the HTML image paths.
+
+
+## Additional community involvement photo placeholders
+
+- `11.jpg` — Hardeep speaking with residents or attending a Ward 4/community event.
+- `12.jpg` — Local gathering space, sports/community group, park, school, or neighbourhood event.
+- `13.jpg` — Volunteer/campaign/community action photo.
